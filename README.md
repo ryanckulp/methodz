@@ -5,11 +5,14 @@ Simple utility to lookup object methods by partial name match or type.
 ```rb
 user = User.last
 
-# returns methods for this class only (ignores Object.methods, ActiveModel::Dirty, and attribute getter/setters)
-user.methodz
+# old (preserved) behavior
+user.methods # => [:as_json, :password_confirmation=, :password_sent_at=, :custom_method_definition, ...]
+
+# new behavior - returns methods for this class only (ignores Object.methods, ActiveModel::Dirty, and attribute getter/setters)
+user.methodz # => [:custom_method_definition, ...]
 
 # returns methods with 'stripe' partial match in definition
-user.methodz('stripe')
+user.methodz('stripe') # => [:set_stripe_subscription, :stripe_customer, :stripe_subscription] (example methods)
 
 # returns public methods with 'stripe' partial match
 user.methodz(q: 'stripe', type: 'public')
