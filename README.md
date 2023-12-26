@@ -11,14 +11,14 @@ user.methodz
 # returns methods with 'stripe' partial match in definition
 user.methodz('stripe')
 
-# returns private methods with 'stripe' partial match
-user.methodz(q: 'stripe', type: 'private')
+# returns public methods with 'stripe' partial match
+user.methodz(q: 'stripe', type: 'public')
 
-# returns public methods with 'password' partial match
-user.methodz(q: 'password', type: 'public')
+# returns protected methods with 'pass' partial match (ie 'password_reset!')
+user.methodz(q: 'password', type: 'protected')
 
-# returns protected methods with 'customer' partial match
-user.methodz(q: 'stripe', type: 'private')
+# returns private methods with 'customer' partial match
+user.methodz(q: 'customer', type: 'private')
 ```
 
 ## Installation
