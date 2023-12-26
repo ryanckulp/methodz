@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors = ["Ryan Kulp"]
   spec.email = ["ryanckulp@gmail.com"]
 
-  spec.summary = "Simple utility to query available object methods by partial name or type."
+  spec.summary = "Lookup object methods by partial name match or type."
   spec.homepage = "https://github.com/ryanckulp/methodz"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
