@@ -1,6 +1,6 @@
 # Methodz
 
-Simple utility to query available object methods by partial name or type.
+Simple utility to lookup object methods by partial name match or type.
 
 ```rb
 user = User.last
